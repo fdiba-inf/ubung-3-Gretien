@@ -13,7 +13,7 @@ public class Triangle {
         double area = 0;
         boolean correct = a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b;
         do{
-          if(correct){
+          if(correct = true){
 
           
           s = (a + b +c)/2.0;
@@ -27,7 +27,7 @@ public class Triangle {
           }else if(a != b && b != c && a != c){
             System.out.println("Triangle: scalene");
           }
-          } else{
+          } else if(correct = false){
             System.out.println("Values are not correct!");
           }
            a = input.nextDouble();

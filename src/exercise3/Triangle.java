@@ -13,21 +13,27 @@ public class Triangle {
         double area = 0;
         boolean correct = a > 0 && b > 0 && c > 0 && a + b > c && b + c > a && a + c > b;
         do{
-          s = (a + b +c)/2;
+          if(correct){
+
+          
+          s = (a + b +c)/2.0;
           area = Math.sqrt(s * (s - a) * (s - b) * (s -c));
           System.out.println("Area: " + area);
-          if(a == b || a == c || b == c){
-            System.out.println("Triangle: isosceles");
-          }else if(a == b && b == c && a == c){
+          if(a == b && b == c ){
             System.out.println("Triangle: equilateral");
+         
+          }else if(a == b || a == c || b == c){
+            System.out.println("Triangle: isosceles");
           }else if(a != b && b != c && a != c){
             System.out.println("Triangle: scalene");
-          }else{
-             System.out.println("Values are not correct!");
-          }a = input.nextDouble();
+          }
+          } else{
+            System.out.println("Values are not correct!");
+          }
+           a = input.nextDouble();
            b = input.nextDouble();
            c = input.nextDouble();
 
-        }while(correct = true);
+        }while(correct);
     }
 }
